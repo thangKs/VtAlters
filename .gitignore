@@ -1,0 +1,11 @@
+# Compiled files
+target/
+*.jar
+
+# IDE files
+.idea/
+*.iml
+*.iws
+
+# Local libraries
+lib/

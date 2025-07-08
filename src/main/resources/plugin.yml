@@ -1,0 +1,42 @@
+name: VtAlters
+version: '1.0'
+main: com.vtalters.VtAlters
+# Changed to the oldest supported version
+api-version: '1.17'
+author: thangks
+description: A plugin for summoning bosses via altars using MythicMobs.
+depend: [MythicMobs]
+commands:
+  vtalters:
+    description: Main command for the VtAlters plugin.
+    usage: /<command> [subcommand]
+    aliases: [altar, vta]
+permissions:
+  vtalters.admin:
+    description: Grants access to all VtAlters commands.
+    default: op
+    children:
+      vtalters.command.create: true
+      vtalters.command.delete: true
+      vtalters.command.list: true
+      vtalters.command.wand: true
+      vtalters.command.reload: true
+      vtalters.command.edit: true
+  vtalters.command.create:
+    description: Allows creating new altars.
+    default: op
+  vtalters.command.delete:
+    description: Allows deleting altars.
+    default: op
+  vtalters.command.list:
+    description: Allows listing all altars.
+    default: op
+  vtalters.command.wand:
+    description: Allows getting the setup wand.
+    default: op
+  vtalters.command.reload:
+    description: Allows reloading the plugin.
+    default: op
+  vtalters.command.edit:
+    description: Allows editing altars.
+    default: op

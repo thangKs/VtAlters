@@ -1,0 +1,59 @@
+#================================#
+#      General Settings          #
+#================================#
+# Set the language file for plugin messages.
+# This corresponds to the file in the 'language' folder.
+# For example, if you have 'messages_vi.yml', set this to 'vi'.
+language: vi
+
+#================================#
+#      Altar Settings            #
+#================================#
+altar:
+  # Prevent other players from taking items placed on pedestals.
+  # If true, only the player who placed an item can take it back.
+  # Set to false to allow anyone to take items.
+  prevent-item-theft: true
+  
+  # Broadcast a server-wide message when a boss is summoned.
+  broadcast-summon:
+    enabled: true
+    
+  # The maximum radius (in blocks) from the center block that pedestals can be placed.
+  max-pedestal-radius: 10.0
+
+#================================#
+#      Effect Settings           #
+#================================#
+effects:
+  # Configure the height of various effects.
+  # Heights are measured from the bottom of the block (e.g., 0.5 is the block's center).
+  heights:
+    # Height of the particle effect on pedestals with a correct item.
+    pedestal: 1.2
+    # Height of the simple particle above the center block when the altar is ready.
+    ready-particle: 1.2
+    # The vertical offset of the ritual rings relative to the central item's position.
+    # 0.0 is exactly at the item's level.
+    ritual-ring-offset: 0.0
+  
+  # Configure the particle types for various effects.
+  # A list of valid particle names can be found on the Spigot Javadocs.
+  particles:
+    altar-ready: "SOUL_FIRE_FLAME"
+    ritual-ring: "SOUL_FIRE_FLAME"
+    pedestal-ready: "END_ROD"
+    animation-trail: "ENCHANTMENT_TABLE"
+    animation-trail-secondary: "END_ROD"
+    convergence-burst: "END_ROD"
+  
+  # Configure sounds for different stages.
+  # Format: "SOUND_NAME,Volume,Pitch"
+  # Example: "ENTITY_PLAYER_LEVELUP,1.0,1.0"
+  # A list of valid sound names can be found on the Spigot Javadocs.
+  sounds:
+    ritual-start: "BLOCK_BEACON_ACTIVATE,1.5,0.8"
+    ritual-ambient-loop: "BLOCK_CONDUIT_AMBIENT_SHORT,1.0,1.2"
+    ritual-items-fly: "ENTITY_PHANTOM_SWOOP,0.7,1.5"
+    ritual-converge: "ENTITY_GENERIC_EXPLODE,2.0,1.2"
+    summon-spawn: "ENTITY_WITHER_SPAWN,2.0,1.0"
