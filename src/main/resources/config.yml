@@ -4,6 +4,7 @@
 # Set the language file for plugin messages.
 # This corresponds to the file in the 'language' folder.
 # For example, if you have 'messages_vi.yml', set this to 'vi'.
+# Available: Vienamese: vi, English: en
 language: vi
 
 #================================#
